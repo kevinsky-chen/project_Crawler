@@ -6,5 +6,6 @@ print(c)"""**
 ˋ舉例ˋdf
     example
     
-`Format one word or one line``
-        code (4 spaces indent)
+`Format one word or one line`
+
+    code (4 spaces indent)
