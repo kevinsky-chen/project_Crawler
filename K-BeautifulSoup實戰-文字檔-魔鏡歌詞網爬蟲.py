@@ -4,11 +4,11 @@ import bs4 , requests, os , re
 """
 
 def songCrawler(url):
-    print("輸入歌手的歌單頁面,可將所有歌曲顯示出來:")
+    print("_______________________\n輸入歌手的歌單頁面,可將所有歌曲顯示出來:")
     htmlFile = requests.get(url)
-    print("網頁下載中")
+    # print("網頁下載中")
     htmlFile.raise_for_status()
-    print("網頁下載完成")
+    # print("網頁下載完成")
     objSoup = bs4.BeautifulSoup(htmlFile.text, "lxml")
     '''
     命名解釋:
@@ -50,11 +50,11 @@ def songCrawler(url):
     print(singerName +"\n" + songFinal1 + songFinal2)
 
 def lyricsCrawler(url):
-    print("輸入一首歌的歌詞頁面,可將所有的歌詞顯示出來:")
+    print("_______________________\n輸入一首歌的歌詞頁面,可將所有的歌詞顯示出來:")
     htmlFile = requests.get(url)
-    print("網頁下載中")
+    # print("網頁下載中")
     htmlFile.raise_for_status()
-    print("網頁下載完成")
+    # print("網頁下載完成")
     objSoup = bs4.BeautifulSoup(htmlFile.text, "lxml")
     """
     命名解釋:
@@ -76,6 +76,8 @@ def lyricsCrawler(url):
 
     print(stringFin.rstrip())           #將結尾的空白.換行等清空
 
-lyricsCrawler("https://mojim.com/twy104500x26x1.htm")
-songCrawler("https://mojim.com/twh158291.htm")
 
+
+if __name__ == '__main__':
+    lyricsCrawler("https://mojim.com/twy104500x26x1.htm")   # 抓歌詞
+    songCrawler("https://mojim.com/twh158291.htm")   # 抓特定歌手的歌
