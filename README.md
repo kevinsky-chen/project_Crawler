@@ -7,3 +7,4 @@ print(c)"""**
     example
     
 `Format one word or one line`
+    code (4 spaces indent)
