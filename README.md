@@ -9,3 +9,7 @@ print(c)"""**
 `Format one word or one line`
 
     code (4 spaces indent)
+
+```python
+print("abc")
+```
